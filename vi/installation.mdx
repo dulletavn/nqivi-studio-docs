@@ -1,0 +1,68 @@
+---
+title: Cài đặt Môi trường & Phần mềm
+description: "Chuẩn bị máy tính của bạn với ImageMagick và FFmpeg để kết xuất video cùng nQivi Studio."
+---
+
+Phần mềm nQivi Studio Client chạy cục bộ trên máy tính của bạn nhằm bảo vệ tối đa quyền riêng tư dữ liệu và tận dụng sức mạnh phần cứng của bạn để render video nhanh hơn. Để lắp ghép và xử lý video/hình ảnh, phần mềm bắt buộc phải sử dụng hai công cụ mã nguồn mở phổ biến: **ImageMagick** và **FFmpeg**.
+
+Làm theo các bước dưới đây để chuẩn bị môi trường chạy phần mềm.
+
+---
+
+## 🛠️ Hướng dẫn cài đặt theo Hệ điều hành
+
+<Tabs>
+  <Tab title="Windows">
+    ### 1. Cài đặt ImageMagick (Bắt buộc để xử lý chữ và phụ đề)
+    1. Tải bộ cài đặt chính thức từ trang chủ ImageMagick:
+       👉 **[Tải ImageMagick cho Windows](https://imagemagick.org/script/download.php)**
+    2. Chạy file cài đặt `.exe` vừa tải về.
+    3. **QUAN TRỌNG:** Trong quá trình cài đặt, hãy chắc chắn tích chọn ô **"Install legacy utilities (e.g. convert)"**. Nếu bỏ qua tùy chọn này, nQivi Studio sẽ không thể kết xuất các phân đoạn văn bản/phụ đề chữ lên video.
+
+    ### 2. Cài đặt FFmpeg
+    1. Tải gói cài đặt tự động FFmpeg:
+       👉 **[Tải FFmpeg (Click chọn file FFmpeg_Full.msi)](https://github.com/icedterminal/ffmpeg-installer/releases/tag/6.0.0.20230306)**
+    2. Chạy file `.msi` vừa tải. Bộ cài này sẽ tự động giải nén và cấu hình biến môi trường (`PATH`) của hệ thống để phần mềm có thể nhận diện FFmpeg ngay lập tức.
+  </Tab>
+
+  <Tab title="macOS">
+    Cách đơn giản nhất để cài đặt các công cụ phụ trợ trên macOS là sử dụng trình quản lý gói **Homebrew**. Hãy mở ứng dụng Terminal trên Mac và chạy các lệnh sau:
+
+    ### 1. Cài đặt ImageMagick
+    ```bash
+    brew install imagemagick
+    ```
+
+    ### 2. Cài đặt FFmpeg
+    ```bash
+    brew install ffmpeg
+    ```
+  </Tab>
+
+  <Tab title="Linux (Ubuntu/Debian)">
+    Mở cửa sổ dòng lệnh Terminal của bạn và chạy các lệnh dưới đây thông qua trình quản lý gói `apt`:
+
+    ### 1. Cập nhật danh sách gói
+    ```bash
+    sudo apt-get update
+    ```
+
+    ### 2. Cài đặt các công cụ
+    ```bash
+    sudo apt-get install -y imagemagick ffmpeg
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## 🚀 Khởi chạy Phần mềm Client
+
+Sau khi đã hoàn thành việc cài đặt các công cụ phụ thuộc trên:
+1. Nhấp đúp chuột vào file chạy phần mềm `nQivi Studio` (hoặc phím tắt khởi động trên desktop) để kích hoạt máy chủ Gradio cục bộ.
+2. Một cửa sổ dòng lệnh đen (Terminal) sẽ mở ra báo hiệu phần mềm đang khởi động.
+3. Khi khởi động xong, hãy mở trình duyệt web của bạn và truy cập địa chỉ:
+   👉 **[http://127.0.0.1:8386](http://127.0.0.1:8386)** (hoặc cổng kết nối tùy chỉnh hiển thị trên màn hình terminal của bạn).
+
+> [!TIP]
+> Nếu bạn gặp phải lỗi render phụ đề hoặc chữ bị biến dạng, hãy kiểm tra xem đường dẫn ImageMagick đã được tick cài đặt legacy chưa và khởi động lại máy tính của bạn để áp dụng các thay đổi đường dẫn môi trường (PATH variable).

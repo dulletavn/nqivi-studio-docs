@@ -1,0 +1,49 @@
+---
+title: "Studio: Thư viện & Tác vụ"
+description: "Quản lý kho tài nguyên media, xem lại video thành phẩm và theo dõi tiến độ render trong Task Manager."
+---
+
+nQivi Studio tích hợp sẵn các công cụ giúp bạn tổ chức tài nguyên thiết kế, phát nhanh video thành phẩm và giám sát các tiến trình kết xuất chạy ngầm.
+
+---
+
+## 🗄️ Asset Library (Thư viện Tài sản)
+
+Tab **Asset Library** là kho chứa tài nguyên của bạn. Nơi đây lưu trữ các file cục bộ hoặc liên kết mạng được sử dụng trong quá trình ghép video (như nhạc nền, video nền, font chữ tùy chỉnh và video phông xanh lá).
+
+### Các loại tài sản hỗ trợ
+* **Background Music (Nhạc nền):** Các đoạn nhạc lặp phát dưới giọng thuyết minh.
+* **Background Video (Video nền):** Video chạy nền (ví dụ: video game Minecraft hoặc video ASMR thư giãn).
+* **Audio (Âm thanh):** Các file âm thanh chung hoặc giọng nói tự thu âm.
+* **Greenscreen Clips:** Các video phông nền xanh lá để ghép đè hiệu ứng.
+* **Fonts (Font chữ):** Các tệp font TrueType (`.ttf`) hoặc OpenType (`.otf`) để tạo phụ đề.
+
+### Cách thêm tài sản vào hệ thống
+* **Tài sản cục bộ:** Tải lên trực tiếp từ ổ đĩa máy tính của bạn.
+* **Tài sản mạng (Link YouTube):** Dán link YouTube (ví dụ: một bản nhạc lo-fi hoặc video lặp). nQivi Studio sẽ tự động giải mã link bằng công cụ `yt-dlp` khi kết xuất video.
+* **Đồng bộ hóa tự động:** Nhấp **Sync Local Assets** để quét thư mục `/public` của dự án và tự động cập nhật các file mới copy vào.
+
+---
+
+## 📹 Content Library (Thư viện Thành phẩm)
+
+Tab **Content Library** liệt kê tất cả các video đã được render thành công.
+
+* **Xem thử nhanh:** Nhấp vào hình đại diện (thumbnail) của video bất kỳ để mở trình phát xem thử ngay trong giao diện phần mềm Client.
+* **Mở thư mục chứa file:** Nhấp vào **Biểu tượng Thư mục** bên cạnh video để mở nhanh thư mục đích chứa file video đó trên máy tính.
+* **Xóa video:** Xóa file video vật lý khỏi ổ đĩa và gỡ bỏ chỉ mục khỏi thư viện.
+
+---
+
+## 🚦 Task Manager (Quản lý Tác vụ)
+
+Quá trình render video là một tiến trình chạy ngầm tiêu hao nhiều CPU/GPU. Tab **Task Manager** giúp bạn giám sát và quản lý các tiến trình này.
+
+### Cơ chế hoạt động của hàng đợi
+* Khi bạn nhấp **Start Task** (trong Autopilot hoặc Remix), tác vụ sẽ được cấp một ID ngẫu nhiên và đưa vào hàng đợi của Task Manager.
+* Bạn có thể bấm tạo liên tục nhiều tác vụ; hệ thống sẽ tự động xếp hàng và kết xuất lần lượt (hoặc chạy song song tùy thuộc cấu hình phần cứng máy tính).
+
+### Giám sát & Vận hành
+* **Theo dõi trạng thái:** Cập nhật các trạng thái thời gian thực (`Processing` - Đang xử lý, `Completed` - Đã xong, `Failed` - Lỗi).
+* **Xem Log chi tiết:** Nhấp chọn vào tác vụ đang chạy để mở hộp thoại hiển thị logs dòng lệnh. Bạn sẽ thấy chính xác hệ thống đang làm đến bước nào (ví dụ: *Đang dịch kịch bản*, *Đang tải video stock*, *Đang ghép phụ đề*).
+* **Hủy & Xóa tác vụ:** Tích chọn vào các ô đầu dòng tác vụ và nhấp **Delete selected tasks** để hủy bỏ các tác vụ đang render hoặc xóa lịch sử danh sách tác vụ cũ.

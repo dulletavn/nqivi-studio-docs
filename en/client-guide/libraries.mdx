@@ -1,0 +1,49 @@
+---
+title: "Studio: Libraries & Tasks"
+description: "Manage media assets, view finished content, and monitor rendering queues in the Task Manager."
+---
+
+nQivi Studio provides built-in utilities to organize assets, play rendered outputs, and monitor processing queues in the background.
+
+---
+
+## 🗄️ Asset Library (Resource Management)
+
+The **Asset Library** tab is your media depository. It stores local and remote files that are used during video creation (such as background music, video footage, custom fonts, and greenscreen animations).
+
+### Asset Types Supported
+* **Background Music:** Audio loops added under voiceovers.
+* **Background Video:** Background loops (e.g. Minecraft parkour or ASMR satisfying clips).
+* **Audio:** General sound files or custom voice recordings.
+* **Greenscreen Clips:** Video overlays with green backgrounds.
+* **Fonts:** Custom TrueType (`.ttf`) or OpenType (`.otf`) fonts for captions.
+
+### Adding Assets to the Database
+* **Local Assets:** Upload files from your computer.
+* **Remote Assets (YouTube links):** Input a YouTube URL (e.g., a lo-fi music track or background loop link). nQivi Studio automatically extracts the direct streaming URL using `yt-dlp` during rendering.
+* **Automatic Synchronization:** Click **Sync Local Assets** to scan the `/public` folder of your project and index newly added files.
+
+---
+
+## 📹 Content Library (Gallery)
+
+The **Content Library** tab lists all successfully rendered videos.
+
+* **Play Preview:** Click on any video thumbnail to watch the completed file inside the Client.
+* **Open File Directory:** Click the **Folder Icon** next to a video to open its physical folder path on your drive.
+* **Delete Content:** Remove the video file and its metadata index.
+
+---
+
+## 🚦 Task Manager (Queue & Logs)
+
+Video rendering is a CPU/GPU-intensive background process. The **Task Manager** is where you monitor these jobs.
+
+### Active Tasks
+* Whenever you click **Start Task** (in Autopilot or Remix), the job is assigned a unique ID and placed in the Task Manager queue.
+* Multiple tasks can be queued; they will render sequentially or concurrently based on your hardware capabilities and settings.
+
+### Monitoring & Operations
+* **Status Tracking:** Monitor progress indicators (`Processing`, `Completed`, `Failed`).
+* **Real-time Logs:** Click on an active task to expand its console logs and see precisely what step is executing (e.g. *Time Captions*, *Download Stock*, *Render Video*).
+* **Delete & Cancel:** Check the selection boxes next to tasks and click **Delete selected tasks** to cancel active rendering or clear historical task items.

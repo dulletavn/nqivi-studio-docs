@@ -1,0 +1,43 @@
+---
+title: Quản lý API Keys
+description: "Hướng dẫn tạo mã khóa API Key trên Website và kết nối với phần mềm Client Desktop."
+---
+
+Để sử dụng phần mềm nQivi Studio Client trên máy tính của bạn, bạn cần kết nối nó với máy chủ thông qua mã khóa xác thực **nQivi Server Key** được tạo từ trang quản trị Website.
+
+---
+
+## 🔑 Cách Tạo Khóa API của bạn
+
+Làm theo các bước sau để lấy và cấu hình API Key:
+
+1. Đăng nhập vào tài khoản của bạn tại [studio.nqivi.com](https://studio.nqivi.com).
+2. Từ thanh menu bên trái, nhấp chọn mục **Api Keys**.
+3. Tại giao diện quản lý API Keys:
+   - Nhấp vào nút **Create API Key**.
+   - Đặt tên gợi nhớ cho key (ví dụ: *May-PC-Nha* hoặc *Laptop-Văn-Phòng*) để dễ dàng theo dõi thiết bị sử dụng.
+   - Nhấp **Generate**.
+4. Mã khóa API sẽ được tạo ra. Hãy sao chép (copy) toàn bộ chuỗi ký tự key này ngay lập tức.
+
+---
+
+## 🔌 Liên kết API Key vào Phần mềm Client
+
+Sau khi bạn đã sao chép khóa API:
+
+1. Khởi chạy phần mềm **nQivi Studio Client** trên máy tính của bạn.
+2. Di chuyển đến tab **Settings** (Cài đặt).
+3. Tìm ô nhập liệu có nhãn **SERVER_API_KEY**.
+4. Dán chuỗi API Key bạn đã sao chép vào ô này.
+5. Nhấp nút **Save** để lưu cấu hình vào cơ sở dữ liệu cục bộ.
+
+Sau khi kích hoạt thành công, số dư credits, credits bonus và trạng thái gói cước của bạn sẽ được đồng bộ và hiển thị ở thanh trạng thái phía trên của phần mềm.
+
+---
+
+## 🔒 Khuyến cáo Bảo mật
+
+> [!WARNING]
+> API Key của bạn cho phép truy cập đầy đủ và trừ credits trong tài khoản của bạn. Hãy bảo vệ nó thật cẩn thận.
+> * **Không chia sẻ** API Key với bất kỳ ai hoặc tải lên các mã nguồn mở công khai (như GitHub).
+> * Nếu nghi ngờ key của mình bị lộ, hãy vào trang **Api Keys** trên website, tìm khóa bị lộ, nhấp **Delete** để vô hiệu hóa nó, sau đó tạo một khóa mới để thay thế ngay lập tức.

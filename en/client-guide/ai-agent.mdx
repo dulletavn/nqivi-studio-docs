@@ -1,0 +1,52 @@
+---
+title: "Studio: AI Agents"
+description: "Leverage specialized AI agents for conversational scripting, research, and remote Telegram control."
+---
+
+The **Agent** tab introduces conversational AI agents into your production pipeline. Instead of configuring settings manually, you can converse with a specialized assistant to draft kịch bản (scripts), brainstorm visual concepts, research YouTube trends, or trigger automated workflows.
+
+---
+
+## 🤖 Chat Interface & Selecting Agents
+
+At the heart of the Agent tab is a chat workspace. You can choose from several pre-configured agent roles:
+
+* **AI Content Creator (`content_creator_agent`):** Helps write scripts, designs video frameworks, and guides you through rendering settings.
+* **YouTube Researcher (`youtube_researcher_agent`):** Scrapes and analyzes YouTube search results to locate viral hooks and trending topics.
+* **Content Team:** A multi-agent system that simulates a collaborative brainstorming session between a scriptwriter, editor, and director.
+* **Deep Research Agent:** Performs exhaustive multi-step web searches to gather highly detailed factual information for educational or documentary content.
+* **News Reporter / Content Writer:** Specialized writing assistants designed for quick news parsing and creative article styling.
+* **Content Workflow:** Automates multi-step pipelines (e.g., write script -> send to TTS -> download visuals -> render).
+
+---
+
+## ⚙️ Configuring Agent Output Preferences
+
+On the right-hand panel, you can preset the video and audio parameters the agent will use when it compiles content for you:
+* **Video Properties:** Set the target language, aspect ratio, quality (720p, 1080p), and duration.
+* **Voice Synthesis:** Choose the TTS engine and speaker profile.
+* **Output Path:** Set custom folders and files for the agent's output deliverables.
+
+---
+
+## 🔗 Pairing with Telegram (Remote Control)
+
+You can pair your AI Agent with social chat platforms like **Telegram**. This allows you to message the agent, draft scripts, and trigger video rendering commands directly from your phone.
+
+### Setting Up the Telegram Bridge
+
+1. **Create a Telegram Bot:**
+   - Open Telegram, search for `@BotFather`, and start a chat.
+   - Send `/newbot` and follow the prompts to create a bot.
+   - Copy the HTTP API **Bot Token** provided by BotFather.
+2. **Configure the Client:**
+   - In the nQivi Client **Agent** tab, expand the **Pairing Chat Channel** accordion.
+   - Set **Channel Type** to **Telegram**.
+   - Paste your Bot Token into the **Bot Token** password field.
+   - Adjust the **Poll (s)** interval (default is 3 seconds).
+3. **Start the Connection:**
+   - Click **Start Pairing**. The status field will update to **Running**.
+4. **Interact Remotely:**
+   - Start a chat with your newly created Telegram bot.
+   - Send prompts like: *“Write a script about space facts and render a vertical video.”*
+   - The bot will process your instructions, deduct credits accordingly, render the video, and send the completed file back to your Telegram chat or notify you.

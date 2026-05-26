@@ -1,0 +1,50 @@
+---
+title: Client App Overview
+description: "Understand the local desktop client interface, settings, and activation process."
+---
+
+The **nQivi Studio Client** is a local desktop application built using a Gradio-based interface. It acts as the execution terminal for all video rendering, audio generation, and live streaming workflows.
+
+---
+
+## ⚡ Activating the Client
+
+Before you can start creating content, you must pair the Client with your Web Portal account:
+
+1. Copy your **nQivi Server Key** from the Website dashboard (under **Api Keys**).
+2. Open the Client App, click on the **Settings** tab.
+3. Paste the key into the **SERVER_API_KEY** textbox.
+4. Click the **Save** button.
+
+Once linked, your subscription plan (e.g. *iPay*, *Plus*, *Pro*) and credit balance will sync and show at the top of the interface.
+
+---
+
+## 🖥️ Layout & Navigation
+
+The interface is structured into simple tabs:
+
+* **Studio:** The primary workplace. It contains **Autopilot** (short-form video creator), **Remix** (video dubbing & split screens), **Agent** (AI chatbot helper), and **Livestream** (multistream manager).
+* **Asset Library:** Manage your local and remote media assets (audios, background music, stock videos, custom fonts, green screen clips).
+* **Content Library:** A built-in gallery where you can view, play, and locate your rendered videos.
+* **Task Manager:** A dashboard that monitors active background rendering tasks, logs output, and allows deleting completed/failed jobs.
+* **Settings:** Configure API keys, folder paths, themes, languages, and output directories.
+
+---
+
+## ⚙️ Settings & Configuration
+
+The **Settings** tab contains critical configurations:
+
+### 1. API Keys Section
+If you are on the **iPay** plan, you can input your own API keys to bypass system service limitations:
+* **OPENAI_API_KEY:** Used for GPT scripting and OpenAI Text-to-Speech (TTS).
+* **GOOGLE_API_KEY:** Used for Gemini scripting, translation, and storyboard generation.
+* **ELEVEN_LABS_API_KEY:** Used for ElevenLabs high-quality voices.
+* **ASSEMBLY:** Used for audio transcription and timing subtitles.
+
+### 2. General Preferences
+* **App Language:** Choose between **Vietnamese** and **English** for the Client interface.
+* **Theme:** Customize the visual style (options include Default, Miku, Ocean, Vietnam, X100).
+* **Dark Mode:** Toggle dark mode on or off.
+* **Output Path:** Set the absolute folder path where all finished videos and temporary assets will be saved.

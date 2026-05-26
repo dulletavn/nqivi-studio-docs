@@ -1,0 +1,43 @@
+---
+title: Managing API Keys
+description: "Learn how to generate your nQivi API keys and connect the client application."
+---
+
+To use the nQivi Studio Desktop Client, you must authorize it by connecting a valid **nQivi Server Key** generated from your Web Portal dashboard.
+
+---
+
+## 🔑 How to Generate your API Key
+
+Follow these steps to obtain and configure your API key:
+
+1. Log in to your account at [studio.nqivi.com](https://studio.nqivi.com).
+2. From the sidebar navigation, click on **Api Keys**.
+3. Under the **API Keys** dashboard:
+   - Click the **Create API Key** button.
+   - Give the key a descriptive name (e.g. *Home-PC* or *Laptop*) to help you track its usage.
+   - Click **Generate**.
+4. The key will be generated and displayed. Copy the full key string immediately.
+
+---
+
+## 🔌 Linking the Key to the Desktop Client
+
+Once you have copied the key:
+
+1. Launch the **nQivi Studio Desktop Client** on your computer.
+2. Navigate to the **Settings** tab.
+3. Find the field labeled **SERVER_API_KEY**.
+4. Paste your copied API Key string into the input field.
+5. Click **Save** to write the key to the local database.
+
+Upon successful activation, your current credits, bonus credits, and subscription level will sync and display at the top of the client application.
+
+---
+
+## 🔒 Security Best Practices
+
+> [!WARNING]
+> Your nQivi API Key grants full access to your credit balance. Keep it secure and private.
+> * **Never share** your key with others or upload it to public repositories (such as GitHub).
+> * If you believe your key has been compromised, go to the **Api Keys** page on the Website dashboard, locate the compromised key, click **Delete**, and generate a new one immediately.

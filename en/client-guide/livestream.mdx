@@ -1,0 +1,73 @@
+---
+title: "Studio: Livestream"
+description: "Broadcast pre-recorded videos to YouTube, Facebook, Twitch, and TikTok with real-time graphic overlays."
+---
+
+The **Livestream** tab is a multi-stream live broadcasting manager. It allows you to loop pre-recorded video files and broadcast them to up to **5 platforms simultaneously** (using RTMP stream keys) without needing external encoder software like OBS.
+
+---
+
+## 📡 Configuring Stream Slots
+
+You can manage up to **5 independent stream setups**. For each stream slot, configure the following:
+
+### 1. Platform & RTMP Settings
+* **Platform:** Select from YouTube, Facebook, Twitch, TikTok, or Custom RTMP.
+* **RTMP URL:** The target ingest server URL (automatically populated for standard platforms).
+* **Stream Key:** Paste your private stream key obtained from your platform creator dashboard.
+* **YouTube OAuth Channel:** (YouTube only) Link your authenticated YouTube account to fetch metadata, schedule events, and start streams directly.
+
+### 2. Video Source
+* **Upload Video(s):** Select one or multiple video files to stream.
+* **Or enter URL(s):** Provide direct URLs to hosted video streams or files (one per line).
+* **Shuffle order:** Shuffle the playing sequence of the loaded videos.
+
+### 3. Loop Mode
+* **Once:** Play the playlist once and stop the stream.
+* **Repeat forever:** Keep looping the videos infinitely (ideal for 24/7 streams).
+* **Repeat N times:** Stop the broadcast after looping the playlist exactly N times.
+
+### 4. Encoding Parameters
+Optimize stream health to prevent lag or buffering:
+* **Resolution:** Set to *Source* (keep original) or downscale (1920x1080, 1280x720) to save bandwidth.
+* **FPS:** Keep original or lock to 24, 30, or 60 FPS.
+* **Video Bitrate:** Configure transmission speeds (choices include 3000k, 4500k, 6000k).
+* **Encoder Preset:** Adjust encoding CPU priority (choices include ultra-fast, very-fast, medium).
+
+---
+
+## 🕐 Scheduling Broadcasts
+
+You can launch a livestream instantly or schedule it to start automatically in the future:
+* **Quick start:** Select *start in 5, 10, or 30 minutes* from the quick dropdown.
+* **Custom delay:** Input a specific number of minutes to delay the start.
+* **Exact Time:** Use the calendar date-time picker to set an exact start timestamp.
+
+Click **Schedule** to place the task into the background queue. It will update to `🕐 Scheduled` status and automatically trigger when the target time is reached.
+
+---
+
+## 🎨 Real-Time Graphic Overlays
+
+A unique feature of the nQivi Livestream engine is the ability to apply or change graphic overlays **while the stream is live**.
+
+### ✏️ Text Overlay
+Chose a font, enter your text, set size/color, and adjust its position.
+* **Opacity:** Make text transparent.
+* **Moving text:** Toggle moving text, set pixel speed, direction, and loop.
+
+### 🖼️ Media Overlay
+Overlay an image, logo, or watermark (e.g. transparent PNG) on top of the live video.
+* Adjust scale (percentage of screen), opacity, rotation angle, and moving animation paths.
+
+> Click **Apply Overlay** to inject the graphics dynamically into the live output.
+
+---
+
+## 🚦 Stream Control Center
+
+Use the global controls at the top of the tab:
+* **Add Stream:** Expand a new stream configuration slot.
+* **Start All / Stop All:** Start or stop all configured streams in one click.
+* **Status Badge:** Monitor status colors (⚪ `Idle`, 🕐 `Scheduled`, 🟡 `Starting`, 🔴 `LIVE`, ⏸️ `Paused`, ⬛ `Stopped`, ❌ `Error`).
+* **Refresh Status:** Force update stream health stats (otherwise updates automatically every 10 seconds).

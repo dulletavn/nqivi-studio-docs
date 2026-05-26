@@ -1,0 +1,68 @@
+---
+title: Environment Setup & Installation
+description: "Prepare your local computer with ImageMagick and FFmpeg to render videos with nQivi Studio."
+---
+
+nQivi Studio Desktop Client runs locally to ensure your data stays private and utilizes your hardware for fast rendering. To construct and compile videos, the application relies on two essential open-source media utilities: **ImageMagick** and **FFmpeg**.
+
+Follow the steps below to prepare your environment.
+
+---
+
+## 🛠️ Step-by-Step Installation
+
+<Tabs>
+  <Tab title="Windows">
+    ### 1. Install ImageMagick (Crucial for subtitle/text rendering)
+    1. Download the official installer from the official page:
+       👉 **[Download ImageMagick for Windows](https://imagemagick.org/script/download.php)**
+    2. Run the downloaded `.exe` installer.
+    3. **IMPORTANT:** During installation, ensure you tick the checkbox for **"Install legacy utilities (e.g. convert)"**. If you skip this, nQivi Studio will fail to render text elements.
+
+    ### 2. Install FFmpeg
+    1. Download the automated installer package:
+       👉 **[Download FFmpeg Installer (Click on FFmpeg_Full.msi)](https://github.com/icedterminal/ffmpeg-installer/releases/tag/6.0.0.20230306)**
+    2. Run the `.msi` file. It will automatically extract FFmpeg and configure your system environment variables (`PATH`) so the app can locate it immediately.
+  </Tab>
+
+  <Tab title="macOS">
+    The simplest way to install the dependencies on macOS is using **Homebrew**. Open your Terminal app and execute:
+
+    ### 1. Install ImageMagick
+    ```bash
+    brew install imagemagick
+    ```
+
+    ### 2. Install FFmpeg
+    ```bash
+    brew install ffmpeg
+    ```
+  </Tab>
+
+  <Tab title="Linux (Ubuntu/Debian)">
+    Open your command terminal and use the `apt` package manager to install the required utilities:
+
+    ### 1. Update Package List
+    ```bash
+    sudo apt-get update
+    ```
+
+    ### 2. Install Dependencies
+    ```bash
+    sudo apt-get install -y imagemagick ffmpeg
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## 🚀 Running the Client App
+
+Once the dependencies are installed:
+1. Double-click the `nQivi Studio` executable file (or run the startup shortcut) to launch the Gradio local server.
+2. The terminal window will open, indicating the app is initializing.
+3. Once running, open your web browser and navigate to:
+   👉 **[http://127.0.0.1:8386](http://127.0.0.1:8386)** (or the custom port printed in your terminal console).
+
+> [!TIP]
+> If you encounter text rendering issues, ensure that ImageMagick's path is correctly configured, and restart your computer to apply path environment changes.

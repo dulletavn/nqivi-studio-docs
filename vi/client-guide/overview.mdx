@@ -1,0 +1,50 @@
+---
+title: Tổng quan Giao diện Client
+description: "Tìm hiểu giao diện phần mềm Client Desktop cục bộ, các cài đặt và quy trình kích hoạt."
+---
+
+Phần mềm **nQivi Studio Client** là ứng dụng chạy cục bộ trên máy tính sử dụng giao diện web Gradio. Đây là nơi thực thi trực tiếp các thuật toán xử lý video, tạo âm thanh và quản lý phát luồng livestream.
+
+---
+
+## ⚡ Kích hoạt Phần mềm
+
+Trước khi có thể tạo nội dung, bạn cần liên kết phần mềm Client với tài khoản Website của mình:
+
+1. Sao chép **nQivi Server Key** từ trang quản trị Website (ở mục **Api Keys**).
+2. Mở phần mềm Client, nhấp vào tab **Settings** (Cài đặt).
+3. Dán key vào ô nhập liệu **SERVER_API_KEY**.
+4. Nhấp nút **Save** để lưu.
+
+Sau khi liên kết thành công, thông tin gói cước (ví dụ: *iPay*, *Plus*, *Pro*) và số dư credits khả dụng của bạn sẽ được đồng bộ và hiển thị ở phía trên của giao diện.
+
+---
+
+## 🖥️ Bố cục & Thanh điều hướng
+
+Giao diện phần mềm được chia thành các tab chức năng trực quan:
+
+* **Studio:** Khu vực làm việc chính. Tab này chứa **Autopilot** (tạo video ngắn tự động), **Remix** (nhân bản và dịch giọng video), **Agent** (trợ lý hội thoại AI) và **Livestream** (phát trực tiếp đa kênh).
+* **Asset Library (Thư viện tài sản):** Quản lý các tài nguyên đa phương tiện cục bộ hoặc liên kết mạng (âm thanh, nhạc nền, video stock, font chữ tùy chỉnh, file Greenscreen).
+* **Content Library (Thư viện thành phẩm):** Nơi hiển thị danh sách, xem thử và mở nhanh thư mục các video đã được render thành công.
+* **Task Manager (Quản lý tác vụ):** Bảng giám sát các tiến trình render ngầm, xem log chi tiết hoặc xóa các tác vụ lỗi/đã hoàn thành.
+* **Settings (Cài đặt):** Cấu hình các API Keys phụ trợ, đường dẫn lưu file, đổi chủ đề giao diện, đổi ngôn ngữ.
+
+---
+
+## ⚙️ Các Thiết lập Quan trọng trong Settings
+
+Tab **Settings** chứa các cấu hình quan trọng sau:
+
+### 1. Cấu hình API Keys phụ trợ
+Nếu bạn đang ở gói tài khoản **iPay**, bạn có thể tự nhập API keys của các dịch vụ bên thứ ba để không bị giới hạn hiệu suất:
+* **OPENAI_API_KEY:** Dùng để chạy mô hình viết kịch bản bằng GPT và giọng đọc OpenAI (TTS).
+* **GOOGLE_API_KEY:** Dùng để chạy mô hình ngôn ngữ Gemini, dịch thuật kịch bản và phân cảnh Storyboard.
+* **ASSEMBLY:** Dùng để phân tích âm thanh và tạo phụ đề khớp thời gian tự động.
+* **ELEVEN_LABS_API_KEY:** Dùng để lấy các giọng nói AI cao cấp từ ElevenLabs.
+
+### 2. Thiết lập chung (General Preferences)
+* **Ngôn ngữ (App Language):** Chọn hiển thị tiếng Anh (English) hoặc tiếng Việt (Vietnamese).
+* **Chủ đề (Theme):** Lựa chọn giao diện màu sắc tùy thích (Default, Miku, Ocean, Vietnam, X100).
+* **Giao diện tối (Dark Mode):** Bật/tắt chế độ tối giúp bảo vệ mắt.
+* **Đường dẫn đầu ra (Output Path):** Chọn thư mục đích trên ổ đĩa máy tính để lưu toàn bộ video thành phẩm.

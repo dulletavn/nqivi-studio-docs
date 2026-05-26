@@ -1,0 +1,73 @@
+---
+title: "Studio: Phát Livestream (Phát trực tiếp)"
+description: "Phát sóng trực tiếp các video có sẵn lên YouTube, Facebook, Twitch và TikTok kèm theo chèn lớp phủ động trong thời gian thực."
+---
+
+Tab **Livestream** cung cấp công cụ quản lý phát sóng trực tiếp đa luồng. Tính năng này cho phép bạn chạy lặp đi lặp lại các file video có sẵn và phát trực tiếp chúng lên tối đa **5 nền tảng cùng một lúc** (thông qua luồng RTMP) mà không cần cài đặt phần mềm mã hóa phức tạp bên thứ ba như OBS.
+
+---
+
+## 📡 Cấu hình các Luồng Phát (Stream Slots)
+
+Bạn có thể quản lý tối đa **5 phiên livestream độc lập**. Với mỗi luồng phát, hãy cấu hình các thông số sau:
+
+### 1. Thông tin nền tảng & RTMP
+* **Platform (Nền tảng):** Chọn nền tảng đích (YouTube, Facebook, Twitch, TikTok hoặc máy chủ RTMP tùy chỉnh).
+* **RTMP URL:** Đường dẫn máy chủ phát (hệ thống tự động điền đối với các nền tảng phổ biến).
+* **Stream Key (Khóa luồng):** Dán khóa luồng riêng tư bạn lấy từ trang quản trị phát trực tiếp của nền tảng đó.
+* **YouTube OAuth Channel:** (Chỉ dành cho YouTube) Liên kết trực tiếp tài khoản YouTube đã xác thực của bạn để tự động tạo sự kiện và phát trực tiếp nhanh gọn.
+
+### 2. Video nguồn phát
+* **Upload Video(s):** Tải lên một hoặc nhiều video để phát theo chuỗi.
+* **Or enter URL(s):** Nhập các liên kết video trực tiếp trên mạng (mỗi dòng một link).
+* **Shuffle order (Trộn thứ tự):** Bật để phát ngẫu nhiên các video trong danh sách.
+
+### 3. Chế độ lặp (Loop Mode)
+* **Once (Một lần):** Phát hết danh sách video một lần rồi tự động ngắt livestream.
+* **Repeat forever (Lặp vô hạn):** Lặp đi lặp lại chuỗi video liên tục không dừng (thích hợp cho các kênh phát livestream 24/7).
+* **Repeat N times (Lặp N lần):** Tự động ngắt stream sau khi phát hết vòng lặp đúng N lần.
+
+### 4. Cấu hình mã hóa (Encoding)
+Tối ưu hóa các thông số kỹ thuật để luồng phát mượt mà, không bị giật lag:
+* **Resolution (Độ phân giải):** Chọn *Source* (giữ nguyên độ phân giải gốc) hoặc giảm xuống (1920x1080, 1280x720) để tiết kiệm băng thông mạng.
+* **FPS:** Giữ nguyên hoặc cố định ở các mốc 24, 30 hoặc 60 FPS.
+* **Video Bitrate:** Tốc độ truyền tải dữ liệu (3000k, 4500k, 6000k).
+* **Encoder Preset:** Ưu tiên xử lý của CPU (ultra-fast, very-fast, medium).
+
+---
+
+## 🕐 Lên lịch phát sóng tự động
+
+Bạn có thể chọn phát livestream ngay lập tức hoặc hẹn giờ phát tự động trong tương lai:
+* **Hẹn giờ nhanh:** Chọn *phát sau 5, 10 hoặc 30 phút* từ danh sách có sẵn.
+* **Chờ tùy chỉnh:** Nhập số phút cụ thể bạn muốn hoãn thời gian bắt đầu.
+* **Chọn giờ chính xác:** Sử dụng bộ chọn ngày/giờ (Calendar picker) để cài đặt thời điểm phát sóng chính xác.
+
+Nhấp chọn **Schedule** để xếp lịch tác vụ chạy ngầm. Trạng thái tác vụ sẽ hiển thị là `🕐 Scheduled` và tự động phát khi đến giờ hẹn.
+
+---
+
+## 🎨 Lớp phủ đồ họa thời gian thực (Overlay)
+
+Một tính năng độc đáo của nQivi Livestream là khả năng áp dụng hoặc thay đổi các lớp phủ đồ họa **trong khi luồng phát đang trực tuyến**.
+
+### ✏️ Lớp phủ Chữ (Text Overlay)
+Nhập văn bản hiển thị, chọn font chữ, cỡ chữ, màu sắc và vị trí hiển thị trên màn hình.
+* **Opacity:** Điều chỉnh độ trong suốt của chữ.
+* **Moving text:** Tạo hiệu ứng chữ chạy màn hình, chỉnh tốc độ chạy, hướng và vòng lặp.
+
+### 🖼️ Lớp phủ Hình ảnh (Media Overlay)
+Chèn đè logo hoặc watermark hình ảnh (đặc biệt là file PNG nền trong suốt) lên góc video đang phát.
+* Điều chỉnh tỷ lệ kích thước (Scale), độ mờ (Opacity), góc xoay (Rotation) và các chuyển động chạy hình.
+
+> Nhấp **Apply Overlay** để cập nhật đồ họa mới trực tiếp lên livestream đang chạy.
+
+---
+
+## 🚦 Trung tâm Kiểm soát Luồng Phát
+
+Sử dụng thanh công cụ điều khiển ở trên cùng của tab:
+* **Add Stream:** Mở thêm một slot cấu hình livestream mới.
+* **Start All / Stop All:** Bắt đầu hoặc dừng toàn bộ các luồng phát chỉ bằng một cú nhấp chuột.
+* **Status Badge:** Theo dõi màu sắc trạng thái luồng (⚪ `Idle` - Chờ, 🕐 `Scheduled` - Đã lên lịch, 🟡 `Starting` - Đang khởi động, 🔴 `LIVE` - Đang phát, ⏸️ `Paused` - Tạm dừng, ⬛ `Stopped` - Đã dừng, ❌ `Error` - Lỗi).
+* **Refresh Status:** Buộc cập nhật trạng thái luồng phát (hoặc hệ thống tự động quét mỗi 10 giây).

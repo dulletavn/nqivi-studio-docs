@@ -1,0 +1,52 @@
+---
+title: "Studio: Trợ lý AI (Agent)"
+description: "Sử dụng các trợ lý AI chuyên biệt để lên kịch bản đàm thoại, nghiên cứu xu hướng và điều khiển từ xa qua Telegram."
+---
+
+Tab **Agent** đưa các trợ lý trí tuệ nhân tạo (AI Agents) dạng hội thoại vào quy trình sản xuất của bạn. Thay vì phải thiết lập các thông số thủ công, bạn có thể trò chuyện trực tiếp với trợ lý để lên kịch bản, thảo luận ý tưởng hình ảnh, nghiên cứu xu hướng YouTube hoặc kích hoạt các quy trình tự động hóa kết xuất.
+
+---
+
+## 🤖 Giao diện Chat & Lựa chọn Trợ lý chuyên biệt
+
+Trung tâm của tab Agent là cửa sổ chat tương tác. Bạn có thể lựa chọn các vai trò Agent phù hợp với mục tiêu:
+
+* **AI Content Creator (`content_creator_agent`):** Hỗ trợ viết kịch bản hội thoại, thiết kế khung sườn video và hướng dẫn bạn thiết lập các thông số render.
+* **YouTube Researcher (`youtube_researcher_agent`):** Thu thập và phân tích kết quả tìm kiếm trên YouTube để tìm ra các tiêu đề thu hút (hooks) và chủ đề đang thịnh hành.
+* **Content Team:** Hệ thống đa trợ lý giả lập một buổi thảo luận ý tưởng giữa biên kịch, biên tập viên và đạo diễn sản xuất.
+* **Deep Research Agent:** Thực hiện các bước tìm kiếm chuyên sâu trên internet để tổng hợp các thông tin chi tiết và chính xác cho video dạng tài liệu hoặc giáo dục.
+* **News Reporter / Content Writer:** Trợ lý viết lách chuyên biệt cho việc tổng hợp tin tức nhanh hoặc viết bài sáng tạo.
+* **Content Workflow:** Tự động hóa chuỗi quy trình nhiều bước (ví dụ: viết kịch bản -> chuyển giọng TTS -> tải hình ảnh -> render video).
+
+---
+
+## ⚙️ Cấu hình Đầu ra cho Trợ lý
+
+Tại bảng điều khiển bên phải, bạn có thể thiết lập trước các thuộc tính video/âm thanh mà Agent sẽ sử dụng khi tạo video cho bạn:
+* **Video:** Đặt ngôn ngữ thuyết minh, tỷ lệ khung hình, chất lượng video (720p, 1080p) và thời lượng dự kiến.
+* **Audio:** Chọn công cụ phát giọng đọc (TTS engine) và giọng nói của nhân vật.
+* **Đường dẫn lưu:** Chọn các thư mục lưu trữ thành phẩm do Agent tạo ra.
+
+---
+
+## 🔗 Liên kết Telegram (Điều khiển từ xa)
+
+Bạn có thể kết nối AI Agent với tài khoản chat **Telegram**. Điều này cho phép bạn ra lệnh cho Agent viết kịch bản, chỉnh sửa và kích hoạt quá trình render video ngay trên điện thoại di động của mình từ bất kỳ đâu.
+
+### Các bước thiết lập kết nối Telegram Bot
+
+1. **Tạo Telegram Bot:**
+   - Mở ứng dụng Telegram, tìm kiếm tài khoản chính thức `@BotFather` và bắt đầu trò chuyện.
+   - Gửi lệnh `/newbot` và làm theo hướng dẫn để đặt tên cho bot.
+   - Sau khi tạo xong, sao chép đoạn mã **Bot Token** dạng HTTP API do BotFather cung cấp.
+2. **Cấu hình trên phần mềm Client:**
+   - Tại tab **Agent** trên nQivi Client, mở rộng mục **Pairing Chat Channel (Kết nối kênh chat)**.
+   - Chọn **Channel Type** là **Telegram**.
+   - Dán đoạn mã Bot Token vào ô **Bot Token**.
+   - Thiết lập thời gian quét tin nhắn **Poll (s)** (mặc định là 3 giây).
+3. **Kích hoạt kết nối:**
+   - Nhấp chọn **Start Pairing**. Trạng thái sẽ chuyển từ *Stopped* sang **Running**.
+4. **Điều khiển từ xa:**
+   - Mở cuộc trò chuyện với bot Telegram bạn vừa tạo trên điện thoại.
+   - Gửi các câu lệnh như: *“Viết kịch bản về 3 loài động vật thông minh nhất và render video ngắn dọc.”*
+   - Bot sẽ tiếp nhận yêu cầu, trừ credits tương ứng trên tài khoản của bạn, tự động thực hiện render video cục bộ trên máy tính và gửi file video thành phẩm trực tiếp qua khung chat Telegram cho bạn.

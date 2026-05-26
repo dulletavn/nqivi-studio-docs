@@ -1,0 +1,49 @@
+---
+title: Tài khoản, Credits & Thanh toán
+description: "Tìm hiểu hệ thống credits của nQivi Studio, gói iPay linh hoạt và các gói đăng ký tháng."
+---
+
+nQivi Studio sử dụng một **Hệ thống Credits** linh hoạt để tính phí cho các tác vụ AI tiêu hao tài nguyên máy chủ và các dịch vụ render. Tùy thuộc vào nhu cầu sản xuất, bạn có thể lựa chọn gói đăng ký thuê bao tháng hoặc gói tự nạp tiền lẻ **iPay**.
+
+---
+
+## 💎 Hệ thống Credits
+
+Credits (được biểu thị bằng biểu tượng 💎 trên hệ thống) là đơn vị tiền tệ nội bộ của nền tảng. Khi bạn thực hiện bất kỳ tác vụ nào sử dụng tài nguyên máy chủ nQivi, credits tương ứng sẽ bị trừ vào số dư tài khoản của bạn.
+
+### Bảng giá tiêu hao Credits chi tiết cho từng tác vụ
+Bảng dưới đây quy định mức khấu trừ credits cụ thể đối với mỗi dịch vụ:
+
+| Dịch vụ / Tác vụ | Chi phí Credits | Mô tả |
+| :--- | :--- | :--- |
+| **Tạo ảnh AI (AI Image Gen)** | Từ **0.25 💎** trên mỗi ảnh | Tạo ảnh minh họa AI (thông qua Freepik, Fal.ai, hoặc công cụ tìm kiếm Bing) |
+| **Giọng đọc AI (Text to Speech - TTS)** | Từ **0.2 💎** trên mỗi phút | Chuyển văn bản thành giọng đọc (sử dụng nQivi Server voice hoặc Gemini/MiniMax) |
+| **Tạo Video không dùng AI** | Từ **0.5 💎** trên mỗi phút | Cắt ghép, chèn overlays, render các tài nguyên có sẵn mà không cần gen kịch bản |
+| **Tạo Video dùng AI** | Từ **1.0+ 💎** trên mỗi phút | Tự động tạo kịch bản, vẽ storyboard, lồng tiếng và kết xuất video thành phẩm |
+
+---
+
+## 💳 Các Gói Cước Tài Khoản
+
+nQivi Studio cung cấp hai hình thức duy trì số dư credits để sử dụng:
+
+### 1. Gói iPay (Pay-as-you-go - Dùng bao nhiêu trả bấy nhiêu)
+Gói **iPay** là gói mặc định khi bạn đăng ký tài khoản miễn phí.
+* **Cách thức hoạt động:** Bạn tự liên kết mã API Keys của riêng bạn (ví dụ: OpenAI, Google Gemini, ElevenLabs) trong phần cài đặt phần mềm Client để xử lý các tác vụ gen AI. Bạn chỉ phải trả credits cho nQivi cho các tác vụ kết xuất và dịch vụ máy chủ cơ bản.
+* **Mua credits lẻ:** Bạn nạp tiền mua credits bất cứ lúc nào khi cần.
+* **Hạn mức giao dịch tối thiểu:**
+  * **Thanh toán Nội địa (Chuyển khoản Ngân hàng/QR Code):** Tối thiểu từ **20.000 VND** cho mỗi lần nạp.
+  * **Thanh toán Quốc tế (Stripe/PayPal/Polar):** Tối thiểu từ **$2.00 USD** cho mỗi lần nạp.
+
+### 2. Các Gói Subscription (Thuê bao tháng)
+Đối với các nhà sáng tạo nội dung tần suất cao, việc đăng ký gói thuê bao tháng giúp nhận lượng credits cố định giá ưu đãi và mở khóa các mô hình nâng cao (như Upload file SRT, Auto Cut, hoặc Voice Changer).
+
+| Gói cước | Giá (VND) | Giá (USD) | Credits Nhận / Tháng | Tính năng nổi bật |
+| :--- | :--- | :--- | :--- | :--- |
+| **iPay (Free)** | 0 VND | $0.00 | 0 | Tính năng cơ bản, bắt buộc liên kết API Keys cá nhân. |
+| **Plus** | **250.000 VND** | **$10.00** | **250** | Quản lý Preset, Quản lý dự án, Voice Changer, lồng video reaction. |
+| **Pro** | **500.000 VND** | **$20.00** | **500** | Gói Plus + Kiểu tin nhắn Texting/Talk bubble, Podcast, Auto Cut, Import file SRT. |
+| **Ultra** | **1.000.000 VND** | **$40.00** | **1000** | Gói Pro + Trợ lý AI sáng tạo nội dung tự động. |
+
+> [!TIP]
+> Đăng ký gói thuê bao theo Năm sẽ nhận được mức **giảm giá 10%** so với thanh toán theo từng tháng. Bạn có thể xem các chương trình khuyến mãi hiện có và thực hiện thanh toán an toàn tại trang [nQivi Pricing](https://studio.nqivi.com/pricing).

@@ -1,82 +1,84 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "nQivi Studio",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
+        "language": "en",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Welcome & Setup",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "en/introduction",
+              "en/quickstart",
+              "en/installation"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Website Portal",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "en/web-guide/account-billing",
+              "en/web-guide/api-keys",
+              "en/web-guide/teams"
+            ]
+          },
+          {
+            "group": "Client Desktop App",
+            "pages": [
+              "en/client-guide/overview",
+              "en/client-guide/autopilot",
+              "en/client-guide/remix",
+              "en/client-guide/ai-agent",
+              "en/client-guide/livestream",
+              "en/client-guide/libraries"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "language": "vi",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Giới thiệu & Cài đặt",
             "pages": [
-              "api-reference/introduction"
+              "vi/introduction",
+              "vi/quickstart",
+              "vi/installation"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Hướng dẫn Website",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+              "vi/web-guide/account-billing",
+              "vi/web-guide/api-keys",
+              "vi/web-guide/teams"
+            ]
+          },
+          {
+            "group": "Hướng dẫn Phần mềm",
+            "pages": [
+              "vi/client-guide/overview",
+              "vi/client-guide/autopilot",
+              "vi/client-guide/remix",
+              "vi/client-guide/ai-agent",
+              "vi/client-guide/livestream",
+              "vi/client-guide/libraries"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo.png",
+    "dark": "/logo.png"
   },
   "navbar": {
     "links": [
